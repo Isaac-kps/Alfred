@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark navy background -->
+  <rect width="32" height="32" rx="7" fill="#1a1a2e"/>
+  <!-- Monocle lens glow -->
+  <circle cx="15" cy="18" r="10" fill="#e2c27d" opacity="0.12"/>
+  <!-- Monocle lens ring -->
+  <circle cx="15" cy="18" r="10" fill="none" stroke="#e2c27d" stroke-width="2"/>
+  <!-- Cord attachment point (top-right of lens) -->
+  <circle cx="22.5" cy="11.5" r="1.2" fill="#e2c27d"/>
+  <!-- Cord curving up to top-right corner -->
+  <path d="M22.5 10.3 Q 26 6 29 3"
+    stroke="#e2c27d" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Palatino Regular "A" centred in lens -->
+  <text x="15" y="23.5"
+    font-family="'Palatino Linotype', Palatino, 'Book Antiqua', serif"
+    font-size="16"
+    font-weight="normal"
+    font-style="normal"
+    fill="#e2c27d"
+    text-anchor="middle">A</text>
+</svg>

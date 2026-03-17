@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark navy background -->
+  <rect width="32" height="32" rx="7" fill="#1a1a2e"/>
+  <!-- Batman Cowl "A": The letter A where the apex splits into Batman's two pointed ears -->
+  <!-- Left ear -->
+  <polygon points="10,13 13,4 15.5,10" fill="#e2c27d"/>
+  <!-- Right ear -->
+  <polygon points="22,13 19,4 16.5,10" fill="#e2c27d"/>
+  <!-- Left leg of the A -->
+  <polygon points="10,13 14,28 16.5,28 14.5,13" fill="#e2c27d"/>
+  <!-- Right leg of the A -->
+  <polygon points="22,13 18,28 15.5,28 17.5,13" fill="#e2c27d"/>
+  <!-- Crossbar of the A (Batman eye mask band) -->
+  <rect x="11.5" y="18" width="9" height="2.5" fill="#e2c27d"/>
+  <!-- Center of cowl (nose bridge) -->
+  <polygon points="14.5,13 17.5,13 16,10" fill="#e2c27d"/>
+</svg>

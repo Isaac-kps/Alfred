@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Favicon — Magnifying Glass vs Monocle</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      gap: 40px;
+    }
+
+    h1 { font-size: 22px; font-weight: 700; color: #1a1a2e; }
+    .subtitle { font-size: 14px; color: #888; margin-top: 6px; text-align: center; }
+
+    .comparison {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border: 2px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 36px 32px;
+      width: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #bbb;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a2e;
+      text-align: center;
+    }
+
+    /* Dark bg large preview -->  */
+    .preview-dark {
+      background: #1a1a2e;
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .preview-dark img { width: 96px; height: 96px; }
+
+    /* Sizes -->  */
+    .sizes-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+    }
+
+    .size-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .size-label { font-size: 9px; color: #bbb; }
+
+    /* Browser tab -->  */
+    .browser-mock {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .tab-bar {
+      background: #e0e0e0;
+      padding: 6px 8px 0;
+      display: flex;
+    }
+
+    .tab {
+      background: white;
+      border-radius: 6px 6px 0 0;
+      padding: 5px 8px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      max-width: 100%;
+    }
+
+    .tab img { width: 13px; height: 13px; flex-shrink: 0; }
+    .tab span { font-size: 10px; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .tab-content {
+      background: white;
+      border: 1px solid #ccc;
+      border-top: none;
+      height: 6px;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .arrow {
+      font-size: 28px;
+      color: #ccc;
+      align-self: center;
+    }
+
+    .badge-new {
+      background: #eef2ff;
+      color: #3730a3;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div style="text-align:center">
+    <h1>Magnifying Glass vs Monocle</h1>
+    <p class="subtitle">Same Palatino Regular "A" · Same dark navy + gold palette<br/>Comparing the two lens styles side by side</p>
+  </div>
+
+  <div class="comparison">
+
+    <!-- Current: Magnifying Glass -->
+    <div class="card">
+      <div class="card-label">Current</div>
+      <div class="card-title">Magnifying Glass</div>
+      <div class="preview-dark">
+        <img src="/favicon-option-c1.svg" alt="Magnifying Glass" />
+      </div>
+      <div class="sizes-row">
+        <div class="size-box">
+          <img src="/favicon-option-c1.svg" width="48" height="48"/>
+          <span class="size-label">48px</span>
+        </div>
+        <div class="size-box">
+          <img src="/favicon-option-c1.svg" width="32" height="32"/>
+          <span class="size-label">32px</span>
+        </div>
+        <div class="size-box">
+          <img src="/favicon-option-c1.svg" width="16" height="16"/>
+          <span class="size-label">16px</span>
+        </div>
+      </div>
+      <div class="browser-mock">
+        <div class="tab-bar">
+          <div class="tab">
+            <img src="/favicon-option-c1.svg" alt=""/>
+            <span>Alfred — Research Library</span>
+          </div>
+        </div>
+        <div class="tab-content"></div>
+      </div>
+      <p class="desc">Bold handle at lower-right. Research and discovery feel. More assertive.</p>
+    </div>
+
+    <div class="arrow">→</div>
+
+    <!-- New: Monocle -->
+    <div class="card" style="border-color: #e2c27d; box-shadow: 0 6px 24px rgba(226,194,125,0.2);">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="card-label">Proposed</div>
+        <span class="badge-new">NEW</span>
+      </div>
+      <div class="card-title">Monocle</div>
+      <div class="preview-dark">
+        <img src="/favicon-monocle-preview.svg" alt="Monocle" />
+      </div>
+      <div class="sizes-row">
+        <div class="size-box">
+          <img src="/favicon-monocle-preview.svg" width="48" height="48"/>
+          <span class="size-label">48px</span>
+        </div>
+        <div class="size-box">
+          <img src="/favicon-monocle-preview.svg" width="32" height="32"/>
+          <span class="size-label">32px</span>
+        </div>
+        <div class="size-box">
+          <img src="/favicon-monocle-preview.svg" width="16" height="16"/>
+          <span class="size-label">16px</span>
+        </div>
+      </div>
+      <div class="browser-mock">
+        <div class="tab-bar">
+          <div class="tab">
+            <img src="/favicon-monocle-preview.svg" alt=""/>
+            <span>Alfred — Research Library</span>
+          </div>
+        </div>
+        <div class="tab-content"></div>
+      </div>
+      <p class="desc">Delicate cord at upper-right. Sophisticated and butler-like. Uniquely Alfred.</p>
+    </div>
+
+  </div>
+
+  <p class="note">Tell Alfred "use monocle" to apply, or "keep magnifying glass" to stay with the current.</p>
+
+</body>
+</html>

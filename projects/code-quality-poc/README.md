@@ -4,9 +4,6 @@
 
 **Status:** Active
 
-**Key Dates:**
-- Deadline: 2026-03-14 (demo to boss)
-
 ## Objective
 Build and validate a repeatable workflow where Alfred:
 1. Scans a project repository (starting with TrustVC)

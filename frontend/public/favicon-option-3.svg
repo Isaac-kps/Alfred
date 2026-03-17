@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Gold background (classic Batman yellow oval) -->
+  <rect width="32" height="32" rx="7" fill="#e2c27d"/>
+  <!-- Black oval behind bat, classic Batman logo style -->
+  <ellipse cx="16" cy="17" rx="13" ry="10" fill="#1a1a2e"/>
+  <!-- Classic bat silhouette in gold -->
+  <path d="M16,11
+    C15,11 13,12 12.5,13.5
+    L9.5,11.5 L5,13 L7,17 L10.5,15.5
+    L9.5,18 L11.5,20 L13.5,17.5
+    L15,19.5 L16,20 L17,19.5
+    L18.5,17.5 L20.5,20 L22.5,18
+    L21.5,15.5 L25,17 L27,13
+    L22.5,11.5 L19.5,13.5
+    C19,12 17,11 16,11Z"
+    fill="#e2c27d"/>
+</svg>
