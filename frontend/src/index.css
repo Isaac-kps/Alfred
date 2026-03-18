@@ -1,11 +1,36 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --bg:           #0f0e0d;
+  --bg-sidebar:   #121110;
+  --bg-content:   #f5f0e8;
+  --gold:         #c9a054;
+  --gold-dim:     #8a6f3a;
+  --gold-subtle:  rgba(201, 160, 84, 0.12);
+  --text-bright:  #f0ebe0;
+  --text-primary: #d8d0c0;
+  --text-muted:   #7a7060;
+  --text-faint:   #4a4540;
+  --border-dark:  #242018;
+  --border-light: #e2d9c8;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono:    'DM Mono', 'JetBrains Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
-  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

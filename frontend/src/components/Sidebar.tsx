@@ -2,6 +2,7 @@ interface SidebarProps {
   files: string[]
   selected: string | null
   onSelect: (file: string) => void
+  label: string
 }
 
 function formatTitle(filename: string): string {
@@ -12,13 +13,15 @@ function formatTitle(filename: string): string {
     .join(' ')
 }
 
-export default function Sidebar({ files, selected, onSelect }: SidebarProps) {
+export default function Sidebar({ files, selected, onSelect, label }: SidebarProps) {
   return (
     <aside className="sidebar">
-      <div className="sidebar-label">Reports</div>
+      <div className="sidebar-header">
+        <div className="sidebar-label">{label}</div>
+      </div>
       <nav className="sidebar-nav">
         {files.length === 0 && (
-          <p className="sidebar-empty">No reports yet.</p>
+          <p className="sidebar-empty">No files yet.</p>
         )}
         {files.map(file => (
           <button
@@ -27,7 +30,7 @@ export default function Sidebar({ files, selected, onSelect }: SidebarProps) {
             onClick={() => onSelect(file)}
             title={file}
           >
-            <span className="sidebar-icon">📄</span>
+            <span className="sidebar-dot" />
             <span className="sidebar-name">{formatTitle(file)}</span>
           </button>
         ))}

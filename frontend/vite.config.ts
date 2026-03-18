@@ -3,26 +3,26 @@ import react from '@vitejs/plugin-react'
 import fs from 'fs'
 import path from 'path'
 
-function researchPlugin() {
+function makeMdPlugin(name: string, dir: string, mountPath: string) {
   return {
-    name: 'research-plugin',
+    name,
     configureServer(server: any) {
-      server.middlewares.use('/api/research', (req: any, res: any) => {
-        const researchDir = path.resolve(__dirname, '../research')
+      server.middlewares.use(mountPath, (req: any, res: any) => {
+        const baseDir = path.resolve(__dirname, dir)
         const url = (req.url || '/').split('?')[0]
 
         if (url === '/' || url === '') {
-          const files = fs.existsSync(researchDir)
-            ? fs.readdirSync(researchDir).filter((f: string) => f.endsWith('.md'))
+          const files = fs.existsSync(baseDir)
+            ? fs.readdirSync(baseDir).filter((f: string) => f.endsWith('.md'))
             : []
           res.setHeader('Content-Type', 'application/json')
           res.setHeader('Access-Control-Allow-Origin', '*')
           res.end(JSON.stringify(files))
         } else {
           const filename = decodeURIComponent(url.slice(1))
-          const filePath = path.resolve(researchDir, filename)
+          const filePath = path.resolve(baseDir, filename)
           if (
-            filePath.startsWith(researchDir) &&
+            filePath.startsWith(baseDir) &&
             fs.existsSync(filePath) &&
             filename.endsWith('.md')
           ) {
@@ -41,7 +41,11 @@ function researchPlugin() {
 }
 
 export default defineConfig({
-  plugins: [react(), researchPlugin()],
+  plugins: [
+    react(),
+    makeMdPlugin('research-plugin', '../research', '/api/research'),
+    makeMdPlugin('reports-plugin', '../report/sprint-summary', '/api/reports'),
+  ],
   server: {
     port: 3003,
   },
